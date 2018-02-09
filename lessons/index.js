@@ -8,3 +8,12 @@ if(coins %2 === 0) {
 else {
     console.log('odd');
 }
+
+switch (coins) {
+    case 1:
+        console.log('sdfd');
+        break;
+
+    default:
+    console.log('other');
+}
