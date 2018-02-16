@@ -9,7 +9,7 @@ switch(resort) {
     alert('Ви обрали місто  Таба');
     break;
   case 2:
-    alert('ВВи обрали місто Шарм');
+    alert('Ви обрали місто Шарм');
     break;
   case 3:
     alert('Ви обрали місто  Хургада');
