@@ -122,7 +122,7 @@ const keyboard = {
 };
 
 getRandCharInAlph = () => {
-  keyboard.currentLang = keyboard.langs[selectLanguage];
+  keyboard.currentLang = keyboard.langs[parseInt(selectLanguage)];
   const enAlph = ((keyboard.layouts['en']['topRow']).join('') + (keyboard.layouts['en']['middleRow']).join('') + (keyboard.layouts['en']['bottomRow']).join(''));
   const ruAlph = ((keyboard.layouts['ru']['topRow']).join('') + (keyboard.layouts['ru']['middleRow']).join('') + (keyboard.layouts['ru']['bottomRow']).join(''));
   const uaAlph = ((keyboard.layouts['ua']['topRow']).join('') + (keyboard.layouts['ua']['middleRow']).join('') + (keyboard.layouts['ua']['bottomRow']).join(''));
@@ -135,11 +135,12 @@ getRandCharInAlph = () => {
   }
 
 }
-
-let selectLanguage = prompt("Select language using en-0, ru-1, ua-2");
-let getLang = parseInt(selectLanguage);
-for (; getLang <= -1 || getLang >= 3 || isNaN(getLang);) {
-  getLang = prompt("Not correct data!, re-enter\nSelect language using en-0, ru-1, ua-2");
+let selectLanguage;
+while (true) {
+  selectLanguage = prompt("Select language using en-0, ru-1, ua-2");
+  if(selectLanguage === '0' || selectLanguage === '1' || selectLanguage === '2') {
+      break;
+  }
 }
 
 getRandCharInAlph();
