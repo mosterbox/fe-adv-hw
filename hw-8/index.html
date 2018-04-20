@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home Work</title>
 </head>
+
 <body>
     <div id="buttons-container"></div>
     <script type="text/termplate" id="buttons">
@@ -13,32 +15,36 @@
             <% arrayString.forEach(item => { %>
                 <li class="menu-item">
                     <% item.forEach(index => { %>
-                        <div class="button"><%= index %></div>
-                    <% }) %>
+                        <div class="button">
+                            <%= index %>
+                        </div>
+                        <% }) %>
                 </li>
-            <% }); %>
+                <% }); %>
         </ul>
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
     <script>
         const keyboardString = "qwertyuiop[]asdfghjkl;'zxcvbnm,./";
-        let arrayString = [[],[],[],];
+        let arrayString = [
+            [],
+            [],
+            [],
+        ];
 
-        function pushToArray (index, array, number) {
+        function pushToArray(index, array, number) {
             array[index].push(number)
         }
 
         function addKeyboardLayout(alphabet) {
             const keyboard = alphabet.split("");
             for (let i = 0; i < keyboard.length; i++) {
-                if ( i <= 11){
+                if (i <= 11) {
                     pushToArray(0, arrayString, keyboard[i]);
-                }
-                else if (i > 11 && i < 23) {
+                } else if (i > 11 && i < 23) {
                     pushToArray(1, arrayString, keyboard[i]);
-                }
-                else {
+                } else {
                     pushToArray(2, arrayString, keyboard[i]);
                 }
             }
@@ -54,4 +60,5 @@
         container.innerHTML = compiled;
     </script>
 </body>
+
 </html>
