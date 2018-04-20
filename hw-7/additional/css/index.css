@@ -1,0 +1,36 @@
+.tile{
+    position: absolute;
+    height: 700px;
+    width: 500px;
+    background-color: #DCDCDC;
+    margin: 50px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.8);
+}
+
+.content-div {
+    width: 440px;
+    margin: 30px;
+    border-radius: 20px 20px 0 0;
+    overflow:hidden;
+    background-color: white;
+}
+
+.img-avatar{
+    width: 100%;
+}
+.content-div p{
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Indie Flower', cursive;
+
+}
+
+.Bottom {
+    display: flex;
+    justify-content: space-around;
+}
+
+.containerS, .containerL, .containerH {
+    display: flex;
+    align-items: center;
+}
